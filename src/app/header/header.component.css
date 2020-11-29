@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    background: #f1f1f1;
+}
+
+.left-block {
+    width: 260px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.left-block > * {
+   display: block;
+   width: 100%;
+}
+.left-block span {
+    color: #666;
+}
+
+.right-block {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.right-block > * {
+    text-align: right;
+}
+.right-block .info {
+    width: 100%;
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+h1 {
+    color: #1098ad;
+    padding: 0;
+    margin: 0;
+}

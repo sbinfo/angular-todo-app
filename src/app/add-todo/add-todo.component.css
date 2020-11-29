@@ -1,0 +1,14 @@
+.add-todo {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    width: 92%;
+    padding: 7px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+}

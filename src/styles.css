@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: Roboto, monospace, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: #1098ad;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #FFC107;
+}
+
+.btn:hover {
+    background-color: #e3ac07;
+}
