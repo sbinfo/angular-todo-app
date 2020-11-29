@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -9,6 +9,8 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 export class TodoItemComponent implements OnInit {
 
   faCheck = faCheck;
+
+  @Input() todo;
 
   constructor() { }
 

@@ -29,11 +29,11 @@
     padding: 4px;
     cursor: pointer;
     font-size: 14px;
-    border: 1px solid transparent;
+    border-bottom: 2px solid transparent;
 }
 
 .footer span:hover {
-    border: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
 }
 
 .footer span.active {
