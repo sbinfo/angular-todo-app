@@ -1,7 +1,7 @@
 .todo-item {
     margin-bottom: 15px;
     background: #fff;
-    padding: 20px;
+    padding: 15px 20px;
     display: flex;
 }
 
@@ -11,15 +11,35 @@ span.select-item {
     height: 17px;
     border: 1px solid #b2b2b2;
     margin-right: 15px;
-    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
     cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
 }
 
-.active {
+.completed {
+    color: #747474;
+    text-decoration: line-through;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.completed > span {
     background: #4CAF50;
     border: 1px solid #4CAF50;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
 }

@@ -2,5 +2,6 @@
     <app-todo-item
         *ngFor="let todo of todos"
         [todo]="todo"
+        (newTodoStatus)="changeTodoStatus($event)"
     ></app-todo-item>
 </ul>

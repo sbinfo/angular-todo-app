@@ -14,4 +14,8 @@ export class TodoListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeTodoStatus(e): void {
+    console.log(e);
+  }
+
 }

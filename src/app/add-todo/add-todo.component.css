@@ -19,3 +19,9 @@ input {
     cursor: pointer;
     font-size: 17px;
 }
+
+input::placeholder {
+    color: #ccc;
+    font-style: italic;
+    font-size: 18px;
+}

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,13 +8,19 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 })
 export class TodoItemComponent implements OnInit {
 
-  faCheck = faCheck;
-
   @Input() todo;
+  @Output() newTodoStatus = new EventEmitter();
+
+  faCheck = faCheck;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  selectItem(): void {
+    this.todo.completed = !this.todo.completed;
+    this.newTodoStatus.emit(this.todo);
   }
 
 }

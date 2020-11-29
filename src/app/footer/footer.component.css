@@ -25,19 +25,27 @@
 }
 
 .footer span {
-    margin-right: 10px;
-    padding: 4px;
+    color: #747474;
+    margin-right: 12px;
+    padding: 2px;
     cursor: pointer;
     font-size: 14px;
     border-bottom: 2px solid transparent;
 }
 
 .footer span:hover {
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #6e6e6e;
+    color: #000;
 }
 
 .footer span.active {
     border-color: #FFC107;
+    color: #000;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 
 .filter-buttons {
