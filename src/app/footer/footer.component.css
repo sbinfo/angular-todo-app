@@ -1,0 +1,45 @@
+.footer {
+    padding: 15px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    background: #f1f1f1;
+}
+
+.footer > div {
+    width: 250px;
+}
+
+.footer .info {
+    width: 250px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #595959;
+}
+.footer .info a{
+    margin-left: 5px;
+    text-decoration: none;
+    color: #FF9800;
+}
+
+.footer span {
+    margin-right: 10px;
+    padding: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid transparent;
+}
+
+.footer span:hover {
+    border: 1px solid #ccc;
+}
+
+.footer span.active {
+    border-color: #FFC107;
+}
+
+.filter-buttons {
+    text-align: left;
+}

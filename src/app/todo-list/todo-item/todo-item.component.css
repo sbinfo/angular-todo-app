@@ -1,0 +1,25 @@
+.todo-item {
+    margin-bottom: 15px;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+}
+
+span.select-item {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #b2b2b2;
+    margin-right: 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.active {
+    background: #4CAF50;
+    border: 1px solid #4CAF50;
+}

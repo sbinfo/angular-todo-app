@@ -1,0 +1,8 @@
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #1098ad;
+    padding-top: 15px;
+    padding-bottom: 2px;
+}

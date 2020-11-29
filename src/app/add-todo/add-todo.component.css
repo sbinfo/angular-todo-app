@@ -1,14 +1,21 @@
 .add-todo {
-    padding: 5px 20px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 input {
-    width: 92%;
+    width: 90%;
     padding: 7px;
     outline: none;
     border: none;
     font-size: 18px;
+}
+
+.select-all {
+    color: #b5b5b5;
+    padding: 5px 5px 5px 0;
+    cursor: pointer;
+    font-size: 17px;
 }
