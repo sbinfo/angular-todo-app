@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   @Input() filter;
+  @Input() isEmptyList;
   @Output() filterText = new EventEmitter<string>();
 
   constructor() { }

@@ -117,4 +117,13 @@ export class AppComponent {
     }
   }
 
+  // Функция которая отслеживает пустоту списка задач
+  isEmptyList(): boolean {
+    if (this.todos.length === 0) {
+      return true;
+    }
+
+    return false;
+  }
+
 }

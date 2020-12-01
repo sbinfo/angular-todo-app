@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input() count;
+  @Input() isEmptyList;
   @Output() clearCompleted = new EventEmitter();
 
   constructor() { }

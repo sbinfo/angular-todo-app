@@ -4,7 +4,7 @@
         <span>October</span>
     </div>
 
-    <div class="right-block">
+    <div class="right-block" [ngClass]="{'disabled-block': isEmptyList}">
         <span class="info">{{ count }} item left</span>
         <button class="btn clear-comp" (click)="deleteCompleted()">Clear completed</button>
     </div>

@@ -1,18 +1,15 @@
-<div class="footer">
+<div class="footer" [ngClass]="{'disabled-block': isEmptyList}">
     <div class="filter-buttons">
-
         <span 
             class="filter-all"
             [ngClass]="{'active': filter === 'all'}"
             (click)="changeFilter($event)"
         >All</span>
-
         <span 
             class="filter-active"
             [ngClass]="{'active': filter === 'active'}"
             (click)="changeFilter($event)"
         >Active</span>
-
         <span 
             class="filter-completed"
             [ngClass]="{'active': filter === 'completed'}"

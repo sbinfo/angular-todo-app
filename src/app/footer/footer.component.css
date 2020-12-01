@@ -46,3 +46,7 @@
 .filter-buttons {
     text-align: left;
 }
+
+.disabled-block {
+    display: none;
+}

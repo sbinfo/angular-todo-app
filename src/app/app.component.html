@@ -3,6 +3,7 @@
   <app-header
     (clearCompleted)="clearCompleted()"
     [count]="notCompletedTodosCount()"
+    [isEmptyList]="isEmptyList()"
   ></app-header>
 
   <app-add-todo
@@ -20,6 +21,7 @@
   <app-footer
     [filter]="filter"
     (filterText)="changeFilter($event)"
+    [isEmptyList]="isEmptyList()"
   ></app-footer>
 
 </div>
