@@ -2,7 +2,8 @@
 
   <app-header
     (clearCompleted)="clearCompleted()"
-    [count]="notCompletedTodosCount()"
+    [completedCount]="completedTodosCount()"
+    [notCompletedTodosCount]="notCompletedTodosCount()"
     [isEmptyList]="isEmptyList()"
   ></app-header>
 

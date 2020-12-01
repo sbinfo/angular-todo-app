@@ -7,13 +7,26 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() count;
+  weekDay;
+  date;
+
+  @Input() completedCount;
+  @Input() notCompletedTodosCount;
   @Input() isEmptyList;
   @Output() clearCompleted = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+    const options = {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    };
+    this.date = new Intl.DateTimeFormat('en-US', options).format( new Date() );
+
+    this.weekDay = new Intl.DateTimeFormat('en-US', { weekday: 'long'}).format( new Date() );
+
   }
 
   deleteCompleted(): void {

@@ -79,6 +79,10 @@ export class AppComponent {
     return this.todos.filter( item => !item.completed ).length;
   }
 
+  completedTodosCount(): number {
+    return this.todos.filter( item => item.completed ).length;
+  }
+
   changeTodoStatus(id): void {
     let flag = true;
     // tslint:disable-next-line:forin
