@@ -1,7 +1,8 @@
 .todo-item {
+    position: relative;
     margin-bottom: 15px;
     background: #fff;
-    padding: 15px 20px;
+    padding: 2px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,8 +10,9 @@
 
 .todo-item p {
     display: inherit;
+    width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 10px 0;
 }
 
 span.select-item {
@@ -32,6 +34,10 @@ span.select-item {
     -o-transition: .4s;
 }
 
+.todo-text {
+    width: 100%;
+}
+
 .completed p {
     color: #747474;
     text-decoration: line-through;
@@ -42,7 +48,7 @@ span.select-item {
     -o-transition: 0.4s;
 }
 
-.completed p > span {
+.completed p > span.select-item {
     background: #4CAF50;
     border: 1px solid #4CAF50;
     transition: .4s;
@@ -67,4 +73,17 @@ span.select-item {
 
 .btn-disabled {
     display: none;
+}
+
+.edit-disabled {
+    display: none;
+}
+
+.edit {
+    position: absolute;
+    width: 93%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 18px;
+    user-select: none;
 }

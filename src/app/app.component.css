@@ -4,3 +4,18 @@
     margin-top: 50px;
     background-color: #fff;
 }
+
+.info-block {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: #d4d4d4;
+    font-weight: 100;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.info-block small {
+    display: block;
+    line-height: 1rem;
+}

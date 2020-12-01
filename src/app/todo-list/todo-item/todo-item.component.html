@@ -3,9 +3,21 @@
         <span class="select-item" (click)="selectItem()">
             <fa-icon [icon]="faCheck"></fa-icon>
         </span>
-
-        {{ todo.text }}
+        <span class="todo-text" (dblclick)="editMode()">
+            {{ todo.text }}
+        </span>
     </p>
+
+    <input
+        #edit 
+        type="text" 
+        class="edit"
+        [ngClass]="{'edit-disabled': !toEditMode}"
+        [value]="todo.text"
+        (keydown.enter)="doneEdit($event)"
+        (keydown.esc)="doneCancel($event)"
+        (blur)="doneEdit($event)"
+    >
 
     <span class="delete-item" (click)="deleteItem()">
         <fa-icon [icon]="faTimes"></fa-icon>
