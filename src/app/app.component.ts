@@ -17,6 +17,8 @@ export class AppComponent {
   // Переменная для изменение цвета кнопки выбора всех елементов
   isSelectedAll = false;
 
+  filter = 'all';
+
   todos: Todo[] = [
     { id: 1, text: 'Learn Angular', completed: false },
     { id: 2, text: 'Make Coffee', completed: true },
@@ -95,6 +97,23 @@ export class AppComponent {
       this.isSelectedAll = true;
     } else {
       this.isSelectedAll = false;
+    }
+  }
+
+  changeFilter(filter: string): void {
+    this.filter = filter;
+  }
+
+  filteredTodos(): Todo[] {
+    switch (this.filter) {
+      case 'active':
+        return this.todos.filter( item => !item.completed );
+        break;
+      case 'completed':
+        return this.todos.filter( item => item.completed );
+        break;
+      default:
+        return this.todos;
     }
   }
 

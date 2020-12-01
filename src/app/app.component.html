@@ -12,11 +12,14 @@
   ></app-add-todo>
 
   <app-todo-list
-    [todos]="todos"
+    [todos]="filteredTodos()"
     (indexForDelete)="deleteTodo($event)"
     (changedTodoStatus)="changeTodoStatus($event)"
   ></app-todo-list>
 
-  <app-footer></app-footer>
+  <app-footer
+    [filter]="filter"
+    (filterText)="changeFilter($event)"
+  ></app-footer>
 
 </div>
