@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,11 +8,18 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 })
 export class AddTodoComponent implements OnInit {
 
+  @Output() addTodoItem = new EventEmitter<string>();
+
   faCheck = faCheck;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addTodo(e): void {
+    this.addTodoItem.emit( e.target.value );
+    e.target.value = ''; // очишаем input
   }
 
 }

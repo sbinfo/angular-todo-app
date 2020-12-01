@@ -2,7 +2,9 @@
 
   <app-header></app-header>
 
-  <app-add-todo></app-add-todo>
+  <app-add-todo
+    (addTodoItem)="addItem($event)"
+  ></app-add-todo>
 
   <app-todo-list
     [todos]="todos"

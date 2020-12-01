@@ -1,4 +1,8 @@
 <div class="add-todo">
     <span class="select-all"><fa-icon [icon]="faCheck"></fa-icon></span>
-    <input type="text" placeholder="Type your task">
+    <input 
+        type="text" 
+        placeholder="Type your task"
+        (keydown.enter)="addTodo($event)"    
+    >
 </div>

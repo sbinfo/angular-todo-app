@@ -20,4 +20,18 @@ export class AppComponent {
     { id: 3, text: 'Create Awesome Apps', completed: false },
   ];
 
+  addItem(newItem: string): void {
+    // создаем id из времени
+    const index = new Date().getTime();
+    // Создаем новый обьект и передаем туда новый Todo
+    const newItemObj: Todo = {
+      id: index,
+      text: newItem,
+      completed: false
+    };
+
+    // Добавляем новый todo в начале списка
+    this.todos.unshift(newItemObj);
+  }
+
 }
