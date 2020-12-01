@@ -18,8 +18,10 @@ export class AddTodoComponent implements OnInit {
   }
 
   addTodo(e): void {
-    this.addTodoItem.emit( e.target.value );
-    e.target.value = ''; // очишаем input
+    if ( e.target.value ) {
+      this.addTodoItem.emit( e.target.value );
+      e.target.value = ''; // очишаем input
+    }
   }
 
 }
