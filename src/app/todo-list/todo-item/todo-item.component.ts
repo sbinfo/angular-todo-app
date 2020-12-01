@@ -9,8 +9,8 @@ import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 export class TodoItemComponent implements OnInit {
 
   @Input() todo;
-  @Output() newTodoStatus = new EventEmitter();
-  @Output() indexForDelete = new EventEmitter();
+  @Output() newTodoStatus = new EventEmitter<number | string>();
+  @Output() indexForDelete = new EventEmitter<number | string>();
 
   faCheck = faCheck;
   faTimes = faTimes;
@@ -21,8 +21,8 @@ export class TodoItemComponent implements OnInit {
   }
 
   selectItem(): void {
-    this.todo.completed = !this.todo.completed;
-    this.newTodoStatus.emit( this.todo );
+    // this.todo.completed = !this.todo.completed;
+    this.newTodoStatus.emit( this.todo.id );
   }
 
   deleteItem(): void {

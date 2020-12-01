@@ -9,6 +9,7 @@ export class TodoListComponent implements OnInit {
 
   @Input() todos;
   @Output() indexForDelete = new EventEmitter<number | string>();
+  @Output() changedTodoStatus = new EventEmitter<number | string>();
 
   constructor() { }
 
@@ -16,7 +17,7 @@ export class TodoListComponent implements OnInit {
   }
 
   changeTodoStatus(e): void {
-    console.log(e);
+    this.changedTodoStatus.emit(e);
   }
 
   indexForDeleteSendToApp(index: number | string): void {

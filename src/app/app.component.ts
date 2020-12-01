@@ -77,4 +77,25 @@ export class AppComponent {
     return this.todos.filter( item => !item.completed ).length;
   }
 
+  changeTodoStatus(id): void {
+    let flag = true;
+    // tslint:disable-next-line:forin
+    for (const key in this.todos) {
+      if (this.todos[key].id === id) {
+        this.todos[key].completed = !this.todos[key].completed;
+      }
+
+      if (this.todos[key].completed === false) {
+        flag = false;
+      }
+    }
+
+    // Меняем значение переменной isSelectedAll чтобы на фронте примепнять правильные данные
+    if (flag) {
+      this.isSelectedAll = true;
+    } else {
+      this.isSelectedAll = false;
+    }
+  }
+
 }
