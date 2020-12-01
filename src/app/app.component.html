@@ -8,6 +8,7 @@
 
   <app-todo-list
     [todos]="todos"
+    (indexForDelete)="deleteTodo($event)"
   ></app-todo-list>
 
   <app-footer></app-footer>

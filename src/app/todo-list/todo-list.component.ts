@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-todo-list',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TodoListComponent implements OnInit {
 
   @Input() todos;
+  @Output() indexForDelete = new EventEmitter<number | string>();
 
   constructor() { }
 
@@ -16,6 +17,10 @@ export class TodoListComponent implements OnInit {
 
   changeTodoStatus(e): void {
     console.log(e);
+  }
+
+  indexForDeleteSendToApp(index: number | string): void {
+    this.indexForDelete.emit(index);
   }
 
 }

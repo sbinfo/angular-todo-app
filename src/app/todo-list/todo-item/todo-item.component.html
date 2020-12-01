@@ -1,9 +1,13 @@
-<li class="todo-item" [ngClass]="{'completed': todo.completed}" >
-    <span 
-        class="select-item"
-        (click)="selectItem()"
-    >
-        <fa-icon [icon]="faCheck"></fa-icon>
+<li class="todo-item" [ngClass]="{'completed': todo.completed}">
+    <p>
+        <span class="select-item" (click)="selectItem()">
+            <fa-icon [icon]="faCheck"></fa-icon>
+        </span>
+
+        {{ todo.text }} {{ todo.completed }}
+    </p>
+
+    <span class="delete-item" (click)="deleteItem()">
+        <fa-icon [icon]="faTimes"></fa-icon>
     </span>
-    {{ todo.text }} {{ todo.completed }}
 </li>

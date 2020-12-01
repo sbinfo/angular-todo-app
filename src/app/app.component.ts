@@ -34,4 +34,8 @@ export class AppComponent {
     this.todos.unshift(newItemObj);
   }
 
+  deleteTodo(id): void {
+    this.todos =  this.todos.filter( item => item.id !== id );
+  }
+
 }

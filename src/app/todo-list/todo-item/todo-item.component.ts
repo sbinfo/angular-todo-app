@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-todo-item',
@@ -10,8 +10,10 @@ export class TodoItemComponent implements OnInit {
 
   @Input() todo;
   @Output() newTodoStatus = new EventEmitter();
+  @Output() indexForDelete = new EventEmitter();
 
   faCheck = faCheck;
+  faTimes = faTimes;
 
   constructor() { }
 
@@ -20,7 +22,11 @@ export class TodoItemComponent implements OnInit {
 
   selectItem(): void {
     this.todo.completed = !this.todo.completed;
-    this.newTodoStatus.emit(this.todo);
+    this.newTodoStatus.emit( this.todo );
+  }
+
+  deleteItem(): void {
+    this.indexForDelete.emit( this.todo.id );
   }
 
 }
