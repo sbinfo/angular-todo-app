@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,7 +8,9 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 })
 export class AddTodoComponent implements OnInit {
 
+  @Input() isSelectedAll;
   @Output() addTodoItem = new EventEmitter<string>();
+  @Output() selectAllItems = new EventEmitter();
 
   faCheck = faCheck;
 
@@ -22,6 +24,10 @@ export class AddTodoComponent implements OnInit {
       this.addTodoItem.emit( e.target.value );
       e.target.value = ''; // очишаем input
     }
+  }
+
+  selectAll(): void {
+    this.selectAllItems.emit();
   }
 
 }

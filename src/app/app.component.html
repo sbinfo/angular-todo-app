@@ -2,10 +2,13 @@
 
   <app-header
     (clearCompleted)="clearCompleted()"
+    [count]="notCompletedTodosCount()"
   ></app-header>
 
   <app-add-todo
     (addTodoItem)="addItem($event)"
+    (selectAllItems)="selectAll()"
+    [isSelectedAll]="isSelectedAll"
   ></app-add-todo>
 
   <app-todo-list
