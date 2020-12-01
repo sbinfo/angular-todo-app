@@ -38,4 +38,8 @@ export class AppComponent {
     this.todos =  this.todos.filter( item => item.id !== id );
   }
 
+  clearCompleted(): void {
+    this.todos = this.todos.filter( item => !item.completed);
+  }
+
 }

@@ -1,6 +1,8 @@
 <div class="app">
 
-  <app-header></app-header>
+  <app-header
+    (clearCompleted)="clearCompleted()"
+  ></app-header>
 
   <app-add-todo
     (addTodoItem)="addItem($event)"

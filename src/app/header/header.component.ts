@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() clearCompleted = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  deleteCompleted(): void {
+    this.clearCompleted.emit();
   }
 
 }
